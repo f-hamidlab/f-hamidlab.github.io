@@ -9,7 +9,7 @@
 <meta name="author" content="Jane Ling">
 <meta name="author" content="Karla Lozano Gonzalez">
 <meta name="author" content="Fursham Hamid">
-<meta name="dcterms.date" content="2026-02-02">
+<meta name="dcterms.date" content="2026-06-17">
 
 <title>AI coding with Visual Studio Code</title>
 <style>
@@ -3224,7 +3224,7 @@ font-size: 0.9em;
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">February 2, 2026</p>
+        <p class="date">June 17, 2026</p>
       </div>
     </div>
     
@@ -3343,7 +3343,7 @@ font-size: 0.9em;
 <li>To automatically install the apt repository and signing key, such as on a non-interactive terminal, run the following command first:</li>
 </ol>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;code code/add-microsoft-repo boolean true&quot;</span> <span class="kw">|</span> <span class="fu">sudo</span> debconf-set-selections</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>If the previous does not work you can manually install the apt repository:</p>
+<p>If the previous does not work, you can manually install the apt repository:</p>
 <ol type="i">
 <li>Run the following script to install the signing key:</li>
 </ol>
@@ -3370,8 +3370,8 @@ Signed-By: /usr/share/keyrings/microsoft.gpg</code></pre>
 <section id="macos" class="level3">
 <h3 class="anchored" data-anchor-id="macos">macOS</h3>
 <ol type="1">
-<li><p>After downloading the Visual Studio Code for macOS from - <a href="https://code.visualstudio.com/download">visualstudio</a>. Open the browser’s download list and locate the downloaded app or archive.</p></li>
-<li><p>If archive, extract the archive contents. Use double-click for some browsers or select the ‘magnifying glass’ icon with Safari.</p></li>
+<li><p>After downloading the Visual Studio Code for macOS from - <a href="https://code.visualstudio.com/download">visualstudio</a>, open the browser’s download list and locate the downloaded app or archive.</p></li>
+<li><p>If it is an archive, extract its contents. Use double-click for some browsers or select the ‘magnifying glass’ icon with Safari.</p></li>
 <li><p>Drag <code>Visual Studio Code.app</code> to the <strong>Applications</strong> folder, making it available in the macOS Launchpad.</p></li>
 <li><p>Open VS Code from the <strong>Applications</strong> folder, by double clicking the icon.</p></li>
 <li><p>Add VS Code to your Dock by right-clicking on the icon, located in the Dock, to bring up the context menu and choosing <strong>Options</strong>, <strong>Keep in Dock</strong>.</p></li>
@@ -3421,6 +3421,7 @@ Signed-By: /usr/share/keyrings/microsoft.gpg</code></pre>
 <li><p><strong>Github Copilot Chat</strong> [github.copilot-chat] - AI-powered coding assistant that provides intelligent code suggestions, explanations, and help with debugging and problem-solving.</p></li>
 <li><p><strong>Claude Code</strong> [claude-code] - AI-powered coding assistant with advanced code generation, refactoring, and problem-solving capabilities using Claude’s language model.</p></li>
 <li><p><strong>Codex</strong> [openai.codex] - OpenAI’s Codex model for intelligent code completion, generation, and translation across multiple programming languages.</p></li>
+<li><p><strong>Continue</strong> [continue.continue] - Open-source AI coding assistant that provides code completion, chat, and autocomplete features powered by local or cloud LLMs.</p></li>
 </ul>
 <section id="installing-github-copilot" class="level4">
 <h4 class="anchored" data-anchor-id="installing-github-copilot">Installing GitHub Copilot</h4>
@@ -3430,6 +3431,109 @@ Signed-By: /usr/share/keyrings/microsoft.gpg</code></pre>
 <li><p>After installation, you’ll be prompted to sign in with your GitHub account. Click <strong>Sign In</strong> and follow the authentication flow.</p></li>
 <li><p>If you don’t have a GitHub account or GitHub Copilot subscription, visit <a href="https://github.com/features/copilot">https://github.com/features/copilot</a> to register for a <strong>30-day free trial</strong>.</p></li>
 <li><p>Complete the sign-up process and return to VS Code. Once authenticated, GitHub Copilot will be ready to use.</p></li>
+</ol>
+</section>
+<section id="installing-continue-with-e-research-ai-models" class="level4">
+<h4 class="anchored" data-anchor-id="installing-continue-with-e-research-ai-models">Installing Continue with e-Research AI Models</h4>
+<ol type="1">
+<li><p>Open VS Code and go to the <strong>Extensions</strong> view by using the shortcut <code>Ctrl+Shift+X</code> (or <code>Cmd+Shift+X</code> on macOS).</p></li>
+<li><p>In the search bar, type <strong>Continue</strong> and find the extension named <strong>Continue</strong> with the publisher <code>continue</code>.</p></li>
+<li><p>Click the <strong>Install</strong> button to install the extension.</p></li>
+<li><p>Once installed, the <strong>Continue</strong> extension will appear in your sidebar. Open it by clicking the <strong>Continue</strong> icon in the left sidebar.</p></li>
+<li><p>(Optional) To move the chat box to the right sidebar, right-click the <strong>Continue</strong> tab and select <strong>Move to</strong> -&gt; <strong>Secondary Sidebar</strong>.</p></li>
+<li><p>Create an API key following the instructions on the <a href="https://ai.create.kcl.ac.uk/docs/api-keys">e-Research AI Hub</a>.</p></li>
+<li><p>If you are not on the KCL network, you will need to connect through <a href="https://docs.er.kcl.ac.uk/CREATE/tools/openvpn/">OpenVPN</a> to use models provided by the e-Research AI Hub.</p></li>
+<li><p>Check that you have successfully connected to the e-Research AI Hub with the following terminal command.</p></li>
+</ol>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> https://api.ai.create.kcl.ac.uk/v1/models <span class="dt">\</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">-H</span> <span class="st">&quot;Authorization: Bearer sk-YOUR_API_KEY_HERE&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>You should see a list of models:</code></pre>
+<pre><code>{&quot;data&quot;:[{&quot;id&quot;:&quot;arc:apex_pro&quot;,&quot;object&quot;:&quot;model&quot;,&quot;created&quot;:1677610602,&quot;owned_by&quot;:&quot;openai&quot;},{&quot;id&quot;:&quot;arc:apex&quot;,&quot;object&quot;:&quot;model&quot;,&quot;created&quot;:1677610602,&quot;owned_by&quot;:&quot;openai&quot;},{&quot;id&quot;:&quot;arc:nexus&quot;,&quot;object&quot;:&quot;model&quot;,&quot;created&quot;:1677610602,&quot;owned_by&quot;:&quot;openai&quot;},{&quot;id&quot;:&quot;arc:lite&quot;,&quot;object&quot;:&quot;model&quot;,&quot;created&quot;:1677610602,&quot;owned_by&quot;:&quot;openai&quot;},{&quot;id&quot;:&quot;arc:nano&quot;,&quot;object&quot;:&quot;model&quot;,&quot;created&quot;:1677610602,&quot;owned_by&quot;:&quot;openai&quot;},{&quot;id&quot;:&quot;arc:embed&quot;,&quot;object&quot;:&quot;model&quot;,&quot;created&quot;:1677610602,&quot;owned_by&quot;:&quot;openai&quot;},{&quot;id&quot;:&quot;medgemma1.5:4b&quot;,&quot;object&quot;:&quot;model&quot;,&quot;created&quot;:1677610602,&quot;owned_by&quot;:&quot;openai&quot;}],&quot;object&quot;:&quot;list&quot;}</code></pre>
+<ol start="9" type="1">
+<li><p>In the Continue sidebar, click the ⚙️ gear icon (usually at the top or bottom). Select <strong>Configs</strong>, then click the gear icon to open the config file.</p></li>
+<li><p>Add the following configuration to the config file and save the file:</p></li>
+</ol>
+<pre><code>name: Local Config
+version: 1.0.0
+schema: v1
+
+models:
+  - name: ARC-AI-apex
+    provider: openai
+    model: arc:apex
+    apiKey: sk-(YOUR_API_KEY_HERE)
+    apiBase: https://api.ai.create.kcl.ac.uk/v1
+    roles: [chat, edit, apply]
+
+  - name: ARC-AI-nexus
+    provider: openai
+    model: arc:nexus
+    apiKey: sk-(YOUR_API_KEY_HERE)
+    apiBase: https://api.ai.create.kcl.ac.uk/v1
+    roles: [chat, edit, apply]
+
+  - name: ARC-AI-lite
+    provider: openai
+    model: arc:lite
+    apiKey: sk-(YOUR_API_KEY_HERE)
+    apiBase: https://api.ai.create.kcl.ac.uk/v1
+    roles: [chat, edit, apply]
+
+  - name: ARC-AI-nano
+    provider: openai
+    model: arc:nano
+    apiKey: sk-(YOUR_API_KEY_HERE)
+    apiBase: https://api.ai.create.kcl.ac.uk/v1
+    roles: [autocomplete]
+  
+  - name: ARC-AI-embedding
+    provider: openai
+    model: arc:embed
+    apiKey: sk-(YOUR_API_KEY_HERE)
+    apiBase: https://api.ai.create.kcl.ac.uk/v1
+    roles: [embed]
+
+# ✅ Retrieval + embedding tuning
+retrieval:
+  maxChunks: 10           # how many chunks to fetch (6–10 sweet spot)
+  similarityThreshold: 0.25   # lower = more permissive (good for Nomic)
+  rerank: false          # keep false unless you add reranker
+
+# ✅ Chunking (VERY important)
+indexing:
+  chunkSize: 500
+  chunkOverlap: 120
+
+  # ✅ Exclude noisy directories
+  exclude:
+    - node_modules/**
+    - dist/**
+    - build/**
+    - .git/**
+    - &quot;*.log&quot;
+    - &quot;*.lock&quot;
+
+  # ✅ Optional: include only key code dirs if repo is large
+  # include:
+  #   - src/**
+  #   - lib/**
+
+context:
+  - provider: file
+  - provider: code
+  - provider: diff
+  - provider: currentFile
+  - provider: tree
+
+  - provider: repo-map
+    params:
+      includeSignatures: false   # keep this false (faster + less noise)
+</code></pre>
+<ol start="11" type="1">
+<li><p>From Continue’same settings, navigate to <strong>Models</strong> to set the default models for each task. Recommended settings: <code>Chat: ARC-AI-nexus     Autocomplete: ARC-AI-nano     Edit: ARC-AI-nexus     Additional model roles         Apply: ARC-AI-nexus         Embed: ARC-AI-embedding</code></p></li>
+<li><p>Under <strong>Tools</strong> settings, check that Built-in Tools are enabled.</p></li>
+<li><p>Test that the chat box is functioning with a simple prompt like “say hello”. If there is no connection error, you should get a response within 2 seconds.</p></li>
+<li><p>Catch: In agent mode of Continue, sometimes the agent may stall in a confusing loop: ✅ The model thinks it needs to call a tool ❌ But Continue already gave it the file ⚠️ So it gets stuck in a fake “tool-use” loop Solution: In the prompt, explicitly say “In the provided file <span class="citation" data-cites="Tutorial.qmd">@Tutorial.qmd</span>, …”</p></li>
 </ol>
 </section>
 </section>
@@ -3444,7 +3548,7 @@ Signed-By: /usr/share/keyrings/microsoft.gpg</code></pre>
 <ul>
 <li><p><strong>Remote - SSH</strong> [ms-vscode-remote.remote-ssh] - Connect to and develop on remote machines via SSH, allowing you to work with files and run code on distant servers or HPC clusters.</p></li>
 <li><p><strong>Remote Explorer</strong> [ms-vscode-remote.remote-explorer] - Graphical interface for managing and connecting to remote machines, containers, and WSL environments with an intuitive explorer view.</p></li>
-<li><p><strong><em>Try Connect to <a href="https://docs.er.kcl.ac.uk/CREATE/access/">HPC CREATE</a></em></strong></p>
+<li><p><strong><em>Try connecting to <a href="https://docs.er.kcl.ac.uk/CREATE/access/">HPC CREATE</a></em></strong></p>
 <ul>
 <li>To do that, you will need to <a href="https://portal.er.kcl.ac.uk/access/ssh">add a SSH key on the e-Research portal</a>.</li>
 <li>Follow the instruction <a href="https://docs.er.kcl.ac.uk/CREATE/access/">here</a> to create a SSH configuration file.</li>
@@ -3558,24 +3662,24 @@ Signed-By: /usr/share/keyrings/microsoft.gpg</code></pre>
 <li><p><strong>It may take some iterations to get things right. Don’t be frustrated if the first answer doesn’t meet your standard.</strong></p></li>
 <li><p>Copy and paste any error or warning to chatbox for debugging.</p></li>
 <li><p>Here is an example prompt to create a new project</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Create a python script (name of script) that takes (inputs), performs (processing), and gives (outputs).</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>Use argparse to pass inputs to the function.</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>Example of input file can be found in (filepath).</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>Add verbose print-outs for debugging.</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>Use pixi for environment control. </span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>Add a bash script to perform pixi install and pixi run script. </span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>Include a readme file.</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>You can ask me questions to clarify before performing the tasks.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb12"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Create a python script (name of script) that takes (inputs), performs (processing), and gives (outputs).</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>Use argparse to pass inputs to the function.</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>Example of input file can be found in (filepath).</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>Add verbose print-outs for debugging.</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>Use pixi for environment control. </span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>Add a bash script to perform pixi install and pixi run script. </span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>Include a readme file.</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>You can ask me questions to clarify before performing the tasks.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul>
 </section>
 <section id="upload-to-github-repositories" class="level3">
 <h3 class="anchored" data-anchor-id="upload-to-github-repositories">Upload to GitHub repositories</h3>
 <ol type="1">
 <li><p><strong>Initialize a local Git repository</strong>:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> vscode101</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Initial commit: Gene expression data loading project&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> vscode101</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Initial commit: Gene expression data loading project&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p><strong>Create a new repository on GitHub</strong>:</p>
 <ul>
 <li>Go to <a href="https://github.com/new">https://github.com/new</a></li>
@@ -3585,9 +3689,9 @@ Signed-By: /usr/share/keyrings/microsoft.gpg</code></pre>
 <li>Click <strong>Create repository</strong></li>
 </ul></li>
 <li><p><strong>Connect your local repository to GitHub</strong>:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin https://github.com/YOUR_USERNAME/gene-expression-loader.git</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-M</span> main</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin https://github.com/YOUR_USERNAME/gene-expression-loader.git</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-M</span> main</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Replace <code>YOUR_USERNAME</code> with your GitHub username and <code>gene-expression-loader</code> with your repository name.</p></li>
 <li><p><strong>Verify the upload</strong>:</p>
 <ul>
@@ -3595,9 +3699,9 @@ Signed-By: /usr/share/keyrings/microsoft.gpg</code></pre>
 <li>Check that all files are present: <code>pixi.toml</code>, <code>load_data.py</code>, <code>run.sh</code>, and <code>README.md</code></li>
 </ul></li>
 <li><p><strong>Make future updates</strong> (after making changes locally):</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Describe your changes here&quot;</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Describe your changes here&quot;</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ol>
 </section>
 </section>
