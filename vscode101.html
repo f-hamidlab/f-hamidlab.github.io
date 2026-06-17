@@ -3279,7 +3279,7 @@ font-size: 0.9em;
 <h2 class="anchored" data-anchor-id="contents">Contents</h2>
 <ol type="1">
 <li><a href="#getting-a-github-account">Getting a GitHub account</a></li>
-<li><a href="#installation">Installation of VS Code</a>
+<li><a href="#installation-of-vs-code">Installation of VS Code</a>
 <ul>
 <li><a href="#linux">Linux</a></li>
 <li><a href="#macos">macOS</a></li>
@@ -3291,6 +3291,7 @@ font-size: 0.9em;
 <li><a href="#ai--intelligent-coding">AI &amp; Intelligent Coding</a>
 <ul>
 <li><a href="#installing-github-copilot">Installing GitHub Copilot</a></li>
+<li><a href="#installing-continue-with-e-research-ai-models">Installing Continue with e-Research AI Models</a></li>
 </ul></li>
 <li><a href="#version-control--collaboration">Version Control &amp; Collaboration</a></li>
 <li><a href="#remote-development--computing-infrastructure">Remote Development &amp; Computing Infrastructure</a></li>
@@ -3443,50 +3444,49 @@ Signed-By: /usr/share/keyrings/microsoft.gpg</code></pre>
 <li><p>(Optional) To move the chat box to the right sidebar, right-click the <strong>Continue</strong> tab and select <strong>Move to</strong> -&gt; <strong>Secondary Sidebar</strong>.</p></li>
 <li><p>Create an API key following the instructions on the <a href="https://ai.create.kcl.ac.uk/docs/api-keys">e-Research AI Hub</a>.</p></li>
 <li><p>If you are not on the KCL network, you will need to connect through <a href="https://docs.er.kcl.ac.uk/CREATE/tools/openvpn/">OpenVPN</a> to use models provided by the e-Research AI Hub.</p></li>
-<li><p>Check that you have successfully connected to the e-Research AI Hub with the following terminal command.</p></li>
-</ol>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> https://api.ai.create.kcl.ac.uk/v1/models <span class="dt">\</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">-H</span> <span class="st">&quot;Authorization: Bearer sk-YOUR_API_KEY_HERE&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>You should see a list of models:</code></pre>
-<pre><code>{&quot;data&quot;:[{&quot;id&quot;:&quot;arc:apex_pro&quot;,&quot;object&quot;:&quot;model&quot;,&quot;created&quot;:1677610602,&quot;owned_by&quot;:&quot;openai&quot;},{&quot;id&quot;:&quot;arc:apex&quot;,&quot;object&quot;:&quot;model&quot;,&quot;created&quot;:1677610602,&quot;owned_by&quot;:&quot;openai&quot;},{&quot;id&quot;:&quot;arc:nexus&quot;,&quot;object&quot;:&quot;model&quot;,&quot;created&quot;:1677610602,&quot;owned_by&quot;:&quot;openai&quot;},{&quot;id&quot;:&quot;arc:lite&quot;,&quot;object&quot;:&quot;model&quot;,&quot;created&quot;:1677610602,&quot;owned_by&quot;:&quot;openai&quot;},{&quot;id&quot;:&quot;arc:nano&quot;,&quot;object&quot;:&quot;model&quot;,&quot;created&quot;:1677610602,&quot;owned_by&quot;:&quot;openai&quot;},{&quot;id&quot;:&quot;arc:embed&quot;,&quot;object&quot;:&quot;model&quot;,&quot;created&quot;:1677610602,&quot;owned_by&quot;:&quot;openai&quot;},{&quot;id&quot;:&quot;medgemma1.5:4b&quot;,&quot;object&quot;:&quot;model&quot;,&quot;created&quot;:1677610602,&quot;owned_by&quot;:&quot;openai&quot;}],&quot;object&quot;:&quot;list&quot;}</code></pre>
-<ol start="9" type="1">
+<li><p>Check that you have successfully connected to the e-Research AI Hub with the following terminal command.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>    <span class="ex">curl</span> https://api.ai.create.kcl.ac.uk/v1/models <span class="dt">\</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">-H</span> <span class="st">&quot;Authorization: Bearer sk-YOUR_API_KEY_HERE&quot;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">```</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">You</span> should see a list of models:</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>{&quot;data&quot;:[{&quot;id&quot;:&quot;arc:apex_pro&quot;,&quot;object&quot;:&quot;model&quot;,&quot;created&quot;:1677610602,&quot;owned_by&quot;:&quot;openai&quot;},{&quot;id&quot;:&quot;arc:apex&quot;,&quot;object&quot;:&quot;model&quot;,&quot;created&quot;:1677610602,&quot;owned_by&quot;:&quot;openai&quot;},{&quot;id&quot;:&quot;arc:nexus&quot;,&quot;object&quot;:&quot;model&quot;,&quot;created&quot;:1677610602,&quot;owned_by&quot;:&quot;openai&quot;},{&quot;id&quot;:&quot;arc:lite&quot;,&quot;object&quot;:&quot;model&quot;,&quot;created&quot;:1677610602,&quot;owned_by&quot;:&quot;openai&quot;},{&quot;id&quot;:&quot;arc:nano&quot;,&quot;object&quot;:&quot;model&quot;,&quot;created&quot;:1677610602,&quot;owned_by&quot;:&quot;openai&quot;},{&quot;id&quot;:&quot;arc:embed&quot;,&quot;object&quot;:&quot;model&quot;,&quot;created&quot;:1677610602,&quot;owned_by&quot;:&quot;openai&quot;},{&quot;id&quot;:&quot;medgemma1.5:4b&quot;,&quot;object&quot;:&quot;model&quot;,&quot;created&quot;:1677610602,&quot;owned_by&quot;:&quot;openai&quot;}],&quot;object&quot;:&quot;list&quot;}
+```</code></pre></li>
 <li><p>In the Continue sidebar, click the ⚙️ gear icon (usually at the top or bottom). Select <strong>Configs</strong>, then click the gear icon to open the config file.</p></li>
-<li><p>Add the following configuration to the config file and save the file:</p></li>
-</ol>
+<li><p>Add the following configuration to the config file and save the file:</p>
 <pre><code>name: Local Config
 version: 1.0.0
 schema: v1
 
 models:
-  - name: ARC-AI-apex
+- name: ARC-AI-apex
     provider: openai
     model: arc:apex
     apiKey: sk-(YOUR_API_KEY_HERE)
     apiBase: https://api.ai.create.kcl.ac.uk/v1
     roles: [chat, edit, apply]
 
-  - name: ARC-AI-nexus
+- name: ARC-AI-nexus
     provider: openai
     model: arc:nexus
     apiKey: sk-(YOUR_API_KEY_HERE)
     apiBase: https://api.ai.create.kcl.ac.uk/v1
     roles: [chat, edit, apply]
 
-  - name: ARC-AI-lite
+- name: ARC-AI-lite
     provider: openai
     model: arc:lite
     apiKey: sk-(YOUR_API_KEY_HERE)
     apiBase: https://api.ai.create.kcl.ac.uk/v1
     roles: [chat, edit, apply]
 
-  - name: ARC-AI-nano
+- name: ARC-AI-nano
     provider: openai
     model: arc:nano
     apiKey: sk-(YOUR_API_KEY_HERE)
     apiBase: https://api.ai.create.kcl.ac.uk/v1
     roles: [autocomplete]
-  
-  - name: ARC-AI-embedding
+
+- name: ARC-AI-embedding
     provider: openai
     model: arc:embed
     apiKey: sk-(YOUR_API_KEY_HERE)
@@ -3495,17 +3495,17 @@ models:
 
 # ✅ Retrieval + embedding tuning
 retrieval:
-  maxChunks: 10           # how many chunks to fetch (6–10 sweet spot)
-  similarityThreshold: 0.25   # lower = more permissive (good for Nomic)
-  rerank: false          # keep false unless you add reranker
+maxChunks: 10           # how many chunks to fetch (6–10 sweet spot)
+similarityThreshold: 0.25   # lower = more permissive (good for Nomic)
+rerank: false          # keep false unless you add reranker
 
 # ✅ Chunking (VERY important)
 indexing:
-  chunkSize: 500
-  chunkOverlap: 120
+chunkSize: 500
+chunkOverlap: 120
 
-  # ✅ Exclude noisy directories
-  exclude:
+# ✅ Exclude noisy directories
+exclude:
     - node_modules/**
     - dist/**
     - build/**
@@ -3513,27 +3513,47 @@ indexing:
     - &quot;*.log&quot;
     - &quot;*.lock&quot;
 
-  # ✅ Optional: include only key code dirs if repo is large
-  # include:
-  #   - src/**
-  #   - lib/**
+# ✅ Optional: include only key code dirs if repo is large
+# include:
+#   - src/**
+#   - lib/**
 
 context:
-  - provider: file
-  - provider: code
-  - provider: diff
-  - provider: currentFile
-  - provider: tree
+- provider: file
+- provider: code
+- provider: diff
+- provider: currentFile
+- provider: tree
 
-  - provider: repo-map
+- provider: repo-map
     params:
-      includeSignatures: false   # keep this false (faster + less noise)
-</code></pre>
-<ol start="11" type="1">
-<li><p>From Continue’same settings, navigate to <strong>Models</strong> to set the default models for each task. Recommended settings: <code>Chat: ARC-AI-nexus     Autocomplete: ARC-AI-nano     Edit: ARC-AI-nexus     Additional model roles         Apply: ARC-AI-nexus         Embed: ARC-AI-embedding</code></p></li>
+    includeSignatures: false   # keep this false (faster + less noise)
+</code></pre></li>
+<li><p>From Continue’same settings, navigate to <strong>Models</strong> to set the default models for each task.<br>
+Recommended settings:</p>
+<pre><code>Chat: ARC-AI-apex  
+Autocomplete: ARC-AI-nano  
+Edit: ARC-AI-apex  
+Additional model roles  
+    Apply: ARC-AI-nexus  
+    Embed: ARC-AI-embedding  </code></pre></li>
 <li><p>Under <strong>Tools</strong> settings, check that Built-in Tools are enabled.</p></li>
 <li><p>Test that the chat box is functioning with a simple prompt like “say hello”. If there is no connection error, you should get a response within 2 seconds.</p></li>
-<li><p>Catch: In agent mode of Continue, sometimes the agent may stall in a confusing loop: ✅ The model thinks it needs to call a tool ❌ But Continue already gave it the file ⚠️ So it gets stuck in a fake “tool-use” loop Solution: In the prompt, explicitly say “In the provided file <span class="citation" data-cites="Tutorial.qmd">@Tutorial.qmd</span>, …”</p></li>
+<li><p>Catch: In agent mode of Continue, sometimes the agent may stall in a confusing loop:<br>
+✅ The model thinks it needs to call a tool<br>
+❌ But Continue already gave it the file<br>
+⚠️ So it gets stuck in a fake “tool-use” loop<br>
+Solution:</p>
+<ul>
+<li><p>In the prompt, explicitly say “In the provided file <span class="citation" data-cites="Tutorial.qmd">@Tutorial.qmd</span>, …”<br>
+</p></li>
+<li><p>Add a rule in Continue’s Rules setting:</p>
+<pre><code>---
+description: Avoid stalling for Continue agents during tool calling loop
+---
+
+Use the provided context. Do not call tools. Perform the edit and output the revised text directly.</code></pre></li>
+</ul></li>
 </ol>
 </section>
 </section>
@@ -3662,24 +3682,24 @@ context:
 <li><p><strong>It may take some iterations to get things right. Don’t be frustrated if the first answer doesn’t meet your standard.</strong></p></li>
 <li><p>Copy and paste any error or warning to chatbox for debugging.</p></li>
 <li><p>Here is an example prompt to create a new project</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Create a python script (name of script) that takes (inputs), performs (processing), and gives (outputs).</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>Use argparse to pass inputs to the function.</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>Example of input file can be found in (filepath).</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>Add verbose print-outs for debugging.</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>Use pixi for environment control. </span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>Add a bash script to perform pixi install and pixi run script. </span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>Include a readme file.</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>You can ask me questions to clarify before performing the tasks.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb13"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>Create a python script (name of script) that takes (inputs), performs (processing), and gives (outputs).</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>Use argparse to pass inputs to the function.</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>Example of input file can be found in (filepath).</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>Add verbose print-outs for debugging.</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>Use pixi for environment control. </span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>Add a bash script to perform pixi install and pixi run script. </span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>Include a readme file.</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>You can ask me questions to clarify before performing the tasks.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul>
 </section>
 <section id="upload-to-github-repositories" class="level3">
 <h3 class="anchored" data-anchor-id="upload-to-github-repositories">Upload to GitHub repositories</h3>
 <ol type="1">
 <li><p><strong>Initialize a local Git repository</strong>:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> vscode101</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Initial commit: Gene expression data loading project&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> vscode101</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Initial commit: Gene expression data loading project&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p><strong>Create a new repository on GitHub</strong>:</p>
 <ul>
 <li>Go to <a href="https://github.com/new">https://github.com/new</a></li>
@@ -3689,9 +3709,9 @@ context:
 <li>Click <strong>Create repository</strong></li>
 </ul></li>
 <li><p><strong>Connect your local repository to GitHub</strong>:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin https://github.com/YOUR_USERNAME/gene-expression-loader.git</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-M</span> main</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin https://github.com/YOUR_USERNAME/gene-expression-loader.git</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-M</span> main</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Replace <code>YOUR_USERNAME</code> with your GitHub username and <code>gene-expression-loader</code> with your repository name.</p></li>
 <li><p><strong>Verify the upload</strong>:</p>
 <ul>
@@ -3699,9 +3719,9 @@ context:
 <li>Check that all files are present: <code>pixi.toml</code>, <code>load_data.py</code>, <code>run.sh</code>, and <code>README.md</code></li>
 </ul></li>
 <li><p><strong>Make future updates</strong> (after making changes locally):</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Describe your changes here&quot;</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Describe your changes here&quot;</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ol>
 </section>
 </section>
