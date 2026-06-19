@@ -1,0 +1,75 @@
+name: Local Config
+version: 1.0.0
+schema: v1
+
+models:
+  - name: ARC-AI-apex
+    provider: openai
+    model: arc:apex
+    apiKey: sk-(YOUR_API_KEY_HERE)
+    apiBase: https://api.ai.create.kcl.ac.uk/v1
+    roles: [chat, edit, apply]
+
+  - name: ARC-AI-nexus
+    provider: openai
+    model: arc:nexus
+    apiKey: sk-(YOUR_API_KEY_HERE)
+    apiBase: https://api.ai.create.kcl.ac.uk/v1
+    roles: [chat, edit, apply]
+
+  - name: ARC-AI-lite
+    provider: openai
+    model: arc:lite
+    apiKey: sk-(YOUR_API_KEY_HERE)
+    apiBase: https://api.ai.create.kcl.ac.uk/v1
+    roles: [chat, edit, apply]
+
+  - name: ARC-AI-nano
+    provider: openai
+    model: arc:nano
+    apiKey: sk-(YOUR_API_KEY_HERE)
+    apiBase: https://api.ai.create.kcl.ac.uk/v1
+    roles: [autocomplete]
+  
+  - name: ARC-AI-embedding
+    provider: openai
+    model: arc:embed
+    apiKey: sk-(YOUR_API_KEY_HERE)
+    apiBase: https://api.ai.create.kcl.ac.uk/v1
+    roles: [embed]
+
+# ✅ Retrieval + embedding tuning
+retrieval:
+  maxChunks: 10           # how many chunks to fetch (6–10 sweet spot)
+  similarityThreshold: 0.25   # lower = more permissive (good for Nomic)
+  rerank: false          # keep false unless you add reranker
+
+# ✅ Chunking (VERY important)
+indexing:
+  chunkSize: 500
+  chunkOverlap: 120
+
+  # ✅ Exclude noisy directories
+  exclude:
+    - node_modules/**
+    - dist/**
+    - build/**
+    - .git/**
+    - "*.log"
+    - "*.lock"
+
+  # ✅ Optional: include only key code dirs if repo is large
+  # include:
+  #   - src/**
+  #   - lib/**
+
+context:
+  - provider: file
+  - provider: code
+  - provider: diff
+  - provider: currentFile
+  - provider: tree
+
+  - provider: repo-map
+    params:
+      includeSignatures: false   # keep this false (faster + less noise)
