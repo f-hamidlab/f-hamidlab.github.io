@@ -1,5 +1,5 @@
 ---
 name: Karla Lozano Gonzalez
 position: Bioinformatician
-image: Karla.jpeg
+image: Karla.png
 ---
